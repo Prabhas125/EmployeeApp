@@ -31,3 +31,6 @@ The database settings are read from environment variables, never from the code:
 - DB_PASSWORD
 
 Do not commit passwords, keys or endpoints to this repository.
+
+
+Tech stack: JSP, Tomcat 9, Nginx, MySQL.
