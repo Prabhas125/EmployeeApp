@@ -1,0 +1,24 @@
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+build/
+target/
+
+# Java
+*.class
+*.log
+
+
+.env
+setenv.sh
+*.pem
+*.zip
+
+*.jar
+
+Thumbs.db
+.DS_Store
+.vscode/

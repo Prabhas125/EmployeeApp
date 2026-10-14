@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #218838;
+        }
+
+        .view-link {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Employee Registration</h2>
+
+        <form action="register.jsp" method="POST">
+            <input type="hidden" name="action" value="insert">
+
+            <div class="form-group">
+                <label for="eid">Employee ID (EID):</label>
+                <input type="number" id="eid" name="eid" min="1" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ename">Name (ENAME):</label>
+                <input type="text" id="ename" name="ename" maxlength="50" required>
+            </div>
+
+            <div class="form-group">
+                <label for="esalary">Salary (ESALARY):</label>
+                <input type="number" id="esalary" name="esalary" step="0.01" min="0" max="99999999.99" required>
+            </div>
+
+            <div class="form-group">
+                <label for="egender">Gender (EGENDER):</label>
+                <select id="egender" name="egender" required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="eage">Age (EAGE):</label>
+                <input type="number" id="eage" name="eage" min="18" max="100" step="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="eaddress">Address (EADDRESS):</label>
+                <input type="text" id="eaddress" name="eaddress" maxlength="100" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Registration</button>
+        </form>
+
+        <a href="register.jsp?action=view" class="view-link">View All Employees</a>
+    </div>
+
+</body>
+
+</html>
